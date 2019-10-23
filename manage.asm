@@ -96,17 +96,17 @@ beginning:
 
 ;===== call reverse =====
 
-	mov 		rax, 0
-	mov		rdi, array
-	mov		rsi, r15
-	call		reverse
+	;mov 		rax, 0
+	;mov		rdi, array
+	;mov		rsi, r15
+	;call		reverse
 
 ;===== call showarray =====
 
-	mov		rax, 0
-	mov		rdi, array
-	mov		rsi, r15
-	call		showarray
+	;mov		rax, 0
+	;mov		rdi, array
+	;mov		rsi, r15
+	;call		showarray
 
 	mov rax, r15
 
