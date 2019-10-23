@@ -19,7 +19,7 @@ segment .data
 
 segment .bss
 
-	array resq 5
+	array resq 20
 
 segment .text
 
@@ -62,7 +62,7 @@ beginning:
 	push qword 0
 	mov		rax, 0
 	mov		rdi, array
-	mov 		rsi, 5
+	mov 		rsi, 20
 	call		getdata
 
 	mov r15, rax		;stores the number of integers input by the user
@@ -88,6 +88,7 @@ beginning:
 	mov		rsi, correct
 	call		printf
 
+	push qword 0
 	mov 		rax, 0
 	call		getchar
 	cmp		rax, 110
@@ -95,9 +96,19 @@ beginning:
 
 ;===== call reverse =====
 
-	;mov 		rax, 0
-	;mov		rdi, array
-	;mov		rsi, r15
+	mov 		rax, 0
+	mov		rdi, array
+	mov		rsi, r15
+	call		reverse
+
+;===== call showarray =====
+
+	mov		rax, 0
+	mov		rdi, array
+	mov		rsi, r15
+	call		showarray
+
+	mov rax, r15
 
 	pop 	r15
 	pop	r14
