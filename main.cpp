@@ -1,6 +1,8 @@
 #include <iostream>
 
-extern long manage();
+extern "C" long manage();
+
+using namespace std;
 
 int main(){
 

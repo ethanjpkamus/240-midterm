@@ -16,7 +16,7 @@ int getdata(int arr[], int size){
 			break;
 		}
 		cin >> temp;
-		arr[count] temp;
+		arr[count] = temp;
 		count++;
 	}
 

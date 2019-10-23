@@ -1,7 +1,7 @@
 global manage
 
 extern printf
-
+extern getchar
 extern getdata
 extern showarray
 extern reverse
@@ -54,7 +54,7 @@ beginning:
 
 	mov qword	rax, 0
 	mov		rdi, stringformat
-	mov		rsi, welcome
+	mov		rsi, inputprompt
 	call		printf
 
 ;===== call getdata =====
